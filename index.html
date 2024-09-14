@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dynamic Resume</title>
+    <link rel="stylesheet" href="index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Profile Section -->
+      <div class="profile">
+        <div class="profile-header">
+          <img
+            src="assets/shaheeer.jpg"
+            alt="Profile Picture"
+            class="profile-pic"
+          />
+          <div class="profile-info">
+            <h1 id="dynamicName">Shaheer Khan Niazi</h1>
+            <h2 id="dynamicTitle">Internal Auditor</h2>
+          </div>
+        </div>
+        <div class="about">
+          <h3>About Me</h3>
+          <ul>
+            <li>
+              Finalization and submission of monthly sales tax return on FBR and
+              SRB.
+            </li>
+            <li>
+              Assessment, reconciliation and submission of quarterly Advance tax
+              compliance u/s 147.
+            </li>
+            <li>Monthly internal audit.</li>
+            <li>Costing of capital work in progress (CWIP).</li>
+            <li>Feasibility reports for budgeting.</li>
+            <li>
+              Assessment of In-Bond & Ex-Bond GD duties, taxes, CFR value,
+              Assessed value.
+            </li>
+            <li>Recovery of outstanding from the customers.</li>
+            <li>
+              Reconciliation and finalization of annual financial accounts.
+            </li>
+            <li>Reconciliation and submission of annual income tax returns.</li>
+          </ul>
+        </div>
+        <div class="contact">
+          <h3>Contact Me</h3>
+          <ul>
+            <li>📞 03337822662</li>
+            <li>📍 Karachi, Sindh</li>
+            <li>✉️ niazi2822@gmail.com</li>
+          </ul>
+        </div>
+        <div class="social">
+          <h3>Follow Me</h3>
+          <ul class="social-icons">
+            <li>
+              <a
+                href="https://www.facebook.com/shaheer.niazi.90"
+                target="_blank"
+                ><i class="fab fa-facebook"></i
+              ></a>
+            </li>
+            <li>
+              <a
+                href="https://www.instagram.com/shaheer.niazi.90/?hl=en"
+                target="_blank"
+                ><i class="fab fa-instagram"></i
+              ></a>
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/shaheer-niazi-09b0b9a1/"
+                target="_blank"
+                ><i class="fab fa-linkedin"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Toggle Buttons Section -->
+      <div class="toggle-section">
+        <button class="toggle-button" onclick="toggleSection('experience')">
+          Experience
+        </button>
+        <button class="toggle-button" onclick="toggleSection('education')">
+          Education
+        </button>
+        <button class="toggle-button" onclick="toggleSection('skills')">
+          Skills
+        </button>
+        <button class="toggle-button" onclick="toggleSection('interests')">
+          Interests
+        </button>
+      </div>
+
+      <!-- Main Content Section -->
+      <div class="main-content">
+        <!-- Experience Section -->
+        <div id="experience" class="content">
+          <h3>Experience</h3>
+          <div id="dynamicExperience">
+            <ul style="color: black">
+              <li>
+                F.R. Merchant & Co. Chartered Accountants (September 2016 to May
+                2020)
+              </li>
+              <li>Major External Audit</li>
+              <li>Major Internal Audit</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Education Section -->
+        <div id="education" class="content">
+          <h3>Education</h3>
+          <div id="dynamicEducation">
+            <ul style="color: black">
+              <li>ICMA (Part-Qualified)</li>
+              <li>BBA Preston University</li>
+              <li>Intermediate(commerce) General Mossa College, Quetta</li>
+              <li>Metric Fazia School,Samgunli, Quetta</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Skills Section -->
+        <div id="skills" class="content">
+          <h3>Skills</h3>
+          <div id="dynamicSkills">
+            <ul class="skill-bar">
+              <li>
+                <div class="bar">
+                  <div class="level" style="width: 80%"></div>
+                </div>
+                <span>HTML - 80%</span>
+              </li>
+              <div class="bar">
+                <div class="level" style="width: 80%"></div>
+              </div>
+              <span>CSS - 80%</span>
+              </li>
+              <li>
+                <div class="bar">
+                  <div class="level" style="width: 70%"></div>
+                </div>
+                <span>JavaScript - 70%</span>
+              </li>
+              <li>
+                <div class="bar">
+                  <div class="level" style="width: 60%"></div>
+                  </div>
+                  <span>Python - 60%</span>
+                </div>
+              </li>
+              
+            </ul>
+          </div>
+        </div>
+
+        <!-- Interests Section -->
+        <div id="interests" class="content">
+          <h3>Interests</h3>
+          <div id="dynamicInterests">
+            <ul>
+              <li>Coding</li>
+              <li>Travelling</li>
+              <li>Photography</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Form Section -->
+      <div class="form-container">
+        <h2>Contact Me</h2>
+        <form>
+          <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+          <div>
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" required />
+          </div>
+          <div>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      function toggleSection(sectionId) {
+        // Get all sections with the class 'content'
+        const sections = document.querySelectorAll(".main-content .content");
+
+        // Loop through all sections and hide them
+        sections.forEach((section) => {
+          section.classList.remove("active");
+        });
+
+        // Show the clicked section
+        const sectionToShow = document.getElementById(sectionId);
+        sectionToShow.classList.add("active");
+      }
+    </script>
+  </body>
+</html>
